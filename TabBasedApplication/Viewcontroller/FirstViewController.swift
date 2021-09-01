@@ -45,9 +45,12 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         detailVC.itemName = candyName[indexPath.row]
         detailVC.itemImg = candyImage[indexPath.row]
-        detailVC.modalPresentationStyle = .popover
         
-        self.present(detailVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        
+//        let nav = UINavigationController(rootViewController: detailVC)
+//        self.present(nav, animated: true, completion: nil)
+        
     }
 
 }

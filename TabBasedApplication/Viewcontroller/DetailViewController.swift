@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = itemName
         candyImage.image = itemImg
         candyLabel.text = itemName
     }

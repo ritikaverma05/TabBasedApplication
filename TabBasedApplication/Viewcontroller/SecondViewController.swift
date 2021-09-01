@@ -55,9 +55,10 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         detailVC.itemName = candyName[indexPath.row]
         detailVC.itemImg = candyImage[indexPath.row]
-        detailVC.modalPresentationStyle = .popover
         
-        self.present(detailVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        
+//        self.present(detailVC, animated: true, completion: nil)
     }
 
 
