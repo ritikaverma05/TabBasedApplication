@@ -37,5 +37,17 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+
+        detailVC.itemName = candyName[indexPath.row]
+        detailVC.itemImg = candyImage[indexPath.row]
+        detailVC.modalPresentationStyle = .popover
+        
+        self.present(detailVC, animated: true, completion: nil)
+    }
 
 }

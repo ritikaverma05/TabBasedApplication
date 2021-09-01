@@ -48,6 +48,17 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        detailVC.itemName = candyName[indexPath.row]
+        detailVC.itemImg = candyImage[indexPath.row]
+        detailVC.modalPresentationStyle = .popover
+        
+        self.present(detailVC, animated: true, completion: nil)
+    }
 
 
 }
