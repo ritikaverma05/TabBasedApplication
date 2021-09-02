@@ -23,7 +23,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return candyName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,15 +42,18 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-
         detailVC.itemName = candyName[indexPath.row]
         detailVC.itemImg = candyImage[indexPath.row]
-        
         self.navigationController?.pushViewController(detailVC, animated: true)
-        
-//        let nav = UINavigationController(rootViewController: detailVC)
-//        self.present(nav, animated: true, completion: nil)
-        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            candyName.remove(at: indexPath.row)
+            candyImage.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
 }
