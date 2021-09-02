@@ -31,6 +31,6 @@ class HeaderCollectionReusableView: UICollectionReusableView{
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.frame = bounds
+        imageView.frame = CGRect(x: 15, y:0, width: 100, height: 50)
     }
 }
