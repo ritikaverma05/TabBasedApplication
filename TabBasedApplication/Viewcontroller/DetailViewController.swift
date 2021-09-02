@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var candyImage: UIImageView!
     @IBOutlet weak var candyLabel: UILabel!
     
@@ -17,9 +17,13 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    func setup(){
         self.navigationItem.title = itemName
         candyImage.image = itemImg
         candyLabel.text = itemName
     }
-
+    
 }

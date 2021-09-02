@@ -104,6 +104,23 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
        return view
     }
 
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
+//         if(section == 0){
+//             view.image.image = #imageLiteral(resourceName: "candyHeader")
+//         }else{
+//             view.image.image = #imageLiteral(resourceName: "chocolateTitle")
+//         }
+//        return view
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
+//
+//        view.image.image = #imageLiteral(resourceName: "chocolateTitle")
+//
+//        return 80
+//    }
     
 }
 
