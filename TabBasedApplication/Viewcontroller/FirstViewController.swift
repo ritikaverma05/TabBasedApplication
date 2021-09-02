@@ -55,5 +55,17 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0                              //set initial cell
+        let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
+        cell.layer.transform = transform
+        
+        UIView.animate(withDuration: 1.0) {         //Final set cell animation
+            cell.alpha = 1.0
+            cell.layer.transform = CATransform3DIdentity
+        }
+    }
 
 }

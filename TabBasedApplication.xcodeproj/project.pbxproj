@@ -115,6 +115,7 @@
 				0DF5206326DF999D00F04C2B /* Storyboard */,
 				0DF5206226DF998800F04C2B /* Viewcontroller */,
 				0DF5206126DF996800F04C2B /* Resources */,
+				0DF5204526DF995100F04C2B /* TabBasedApplicationTests.swift */,
 				0DF5203C26DF995100F04C2B /* Info.plist */,
 			);
 			path = TabBasedApplication;
@@ -123,7 +124,6 @@
 		0DF5204426DF995100F04C2B /* TabBasedApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DF5204526DF995100F04C2B /* TabBasedApplicationTests.swift */,
 				0DF5204726DF995100F04C2B /* Info.plist */,
 			);
 			path = TabBasedApplicationTests;
