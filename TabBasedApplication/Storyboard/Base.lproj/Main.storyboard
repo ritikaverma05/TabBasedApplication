@@ -130,6 +130,22 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r4G-WI-hia">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view key="tableHeaderView" contentMode="scaleToFill" id="Rm7-Jx-ObE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candyHeader" translatesAutoresizingMaskIntoConstraints="NO" id="snA-lJ-vcM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="snA-lJ-vcM" firstAttribute="top" secondItem="Rm7-Jx-ObE" secondAttribute="top" id="0wY-bm-jQ6"/>
+                                                <constraint firstAttribute="trailing" secondItem="snA-lJ-vcM" secondAttribute="trailing" id="ReG-mk-82V"/>
+                                                <constraint firstItem="snA-lJ-vcM" firstAttribute="leading" secondItem="Rm7-Jx-ObE" secondAttribute="leading" id="kBk-Sj-hiY"/>
+                                                <constraint firstAttribute="bottom" secondItem="snA-lJ-vcM" secondAttribute="bottom" id="kSU-qO-odV"/>
+                                            </constraints>
+                                        </view>
                                         <connections>
                                             <outlet property="dataSource" destination="c2Z-cH-Vyx" id="5nI-rW-kSX"/>
                                             <outlet property="delegate" destination="c2Z-cH-Vyx" id="fmg-7g-xB2"/>
@@ -223,6 +239,7 @@
     <resources>
         <image name="1.square.fill" catalog="system" width="128" height="114"/>
         <image name="2.square.fill" catalog="system" width="128" height="114"/>
+        <image name="candyHeader" width="1600" height="622"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
