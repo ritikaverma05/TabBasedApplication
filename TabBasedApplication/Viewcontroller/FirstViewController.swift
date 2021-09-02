@@ -19,7 +19,11 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "FirstTableViewCell")
-        
+        tableView.register(MyCustomHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,6 +88,49 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         let swipeConfig = UISwipeActionsConfiguration(actions: [more])
         return swipeConfig
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 80
+        }
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+       let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
+        if(section == 0){
+            view.image.image = #imageLiteral(resourceName: "candyHeader")
+        }else{
+            view.image.image = #imageLiteral(resourceName: "chocolateTitle")
+        }
+       return view
+    }
 
     
+}
+
+class MyCustomHeader: UITableViewHeaderFooterView {
+    
+    let image = UIImageView()
+
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        configureContents()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureContents() {
+        image.translatesAutoresizingMaskIntoConstraints = false
+
+        contentView.addSubview(image)
+        contentView.backgroundColor = .white
+        
+        NSLayoutConstraint.activate([
+            image.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            image.widthAnchor.constraint(equalToConstant: 100),
+            image.heightAnchor.constraint(equalToConstant: 80),
+            image.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+        ])
+    }
 }
