@@ -21,6 +21,5 @@ class DetailViewController: UIViewController {
         candyImage.image = itemImg
         candyLabel.text = itemName
     }
-    
 
 }
