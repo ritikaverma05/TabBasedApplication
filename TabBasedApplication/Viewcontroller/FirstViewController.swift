@@ -48,14 +48,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            candyName.remove(at: indexPath.row)
-            candyImage.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         cell.alpha = 0                              //set initial cell
@@ -66,6 +58,31 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.alpha = 1.0
             cell.layer.transform = CATransform3DIdentity
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit"){ _, _, _ in
+            print("edit button tapped")
+        }
+        let delete = UIContextualAction(style: .destructive, title: "Delete"){ _, _, _ in
+            print("delete button tapped")
+            self.candyName.remove(at: indexPath.row)
+            self.candyImage.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        let swipeConfig = UISwipeActionsConfiguration(actions: [delete, edit])
+        return swipeConfig
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let more = UIContextualAction(style: .normal, title: "More"){ _, _, _ in
+            print("more button tapped")
+        }
+        more.backgroundColor = .systemBlue
+        let swipeConfig = UISwipeActionsConfiguration(actions: [more])
+        return swipeConfig
     }
 
 }
