@@ -14,10 +14,14 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     var candyName = ["Chocolate truffle", "Chupa Chups", "Dumle", "Flat Tops", "Garoto", "Gummi bears", "Hanukkah gelt", "Hany", "Hershey Bar", "Jelly Tots", "Jolly Rancher", "Kit Kat", "Lindt", "Lollipop", "Macaron", "Pâte de fruits", "Polkagris", "Salmiakki", "Snickers", "Twizzlers"]
     
     @IBOutlet weak var tableView: UITableView!
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    func setup(){
         tableView.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "FirstTableViewCell")
         tableView.register(MyCustomHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
     }
@@ -25,7 +29,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-  
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return candyName.count
     }
@@ -89,45 +93,45 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         return swipeConfig
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 80
-        }
-    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-       let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
         if(section == 0){
             view.image.image = #imageLiteral(resourceName: "candyHeader")
         }else{
             view.image.image = #imageLiteral(resourceName: "chocolateTitle")
         }
-       return view
+        return view
     }
-
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
-//         if(section == 0){
-//             view.image.image = #imageLiteral(resourceName: "candyHeader")
-//         }else{
-//             view.image.image = #imageLiteral(resourceName: "chocolateTitle")
-//         }
-//        return view
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
-//
-//        view.image.image = #imageLiteral(resourceName: "chocolateTitle")
-//
-//        return 80
-//    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80
+    }
+    
+    //    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    //        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
+    //         if(section == 0){
+    //             view.image.image = #imageLiteral(resourceName: "candyHeader")
+    //         }else{
+    //             view.image.image = #imageLiteral(resourceName: "chocolateTitle")
+    //         }
+    //        return view
+    //    }
+    //
+    //    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    //        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! MyCustomHeader
+    //
+    //        view.image.image = #imageLiteral(resourceName: "chocolateTitle")
+    //
+    //        return 80
+    //    }
     
 }
 
 class MyCustomHeader: UITableViewHeaderFooterView {
     
     let image = UIImageView()
-
+    
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         configureContents()
@@ -139,7 +143,7 @@ class MyCustomHeader: UITableViewHeaderFooterView {
     
     func configureContents() {
         image.translatesAutoresizingMaskIntoConstraints = false
-
+        
         contentView.addSubview(image)
         contentView.backgroundColor = .white
         

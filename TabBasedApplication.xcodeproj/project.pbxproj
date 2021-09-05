@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7A87DE26E20AD30028D002 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7A87DD26E20AD30028D002 /* ThirdViewController.swift */; };
+		0D7A87E426E20BA10028D002 /* superTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7A87E226E20BA10028D002 /* superTableViewCell.swift */; };
+		0D7A87E526E20BA10028D002 /* superTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D7A87E326E20BA10028D002 /* superTableViewCell.xib */; };
+		0D7A87EB26E223A50028D002 /* subCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7A87E926E223A50028D002 /* subCollectionViewCell.swift */; };
+		0D7A87EC26E223A50028D002 /* subCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D7A87EA26E223A50028D002 /* subCollectionViewCell.xib */; };
 		0DB1DC6B26DFB028004AD70E /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB1DC6926DFB028004AD70E /* SecondCollectionViewCell.swift */; };
 		0DB1DC6C26DFB028004AD70E /* SecondCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB1DC6A26DFB028004AD70E /* SecondCollectionViewCell.xib */; };
 		0DB1DC7126DFBBE4004AD70E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB1DC7026DFBBE4004AD70E /* DetailViewController.swift */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D7A87DD26E20AD30028D002 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		0D7A87E226E20BA10028D002 /* superTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superTableViewCell.swift; sourceTree = "<group>"; };
+		0D7A87E326E20BA10028D002 /* superTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = superTableViewCell.xib; sourceTree = "<group>"; };
+		0D7A87E926E223A50028D002 /* subCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D7A87EA26E223A50028D002 /* subCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = subCollectionViewCell.xib; sourceTree = "<group>"; };
 		0DB1DC6926DFB028004AD70E /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		0DB1DC6A26DFB028004AD70E /* SecondCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCollectionViewCell.xib; sourceTree = "<group>"; };
 		0DB1DC7026DFBBE4004AD70E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +100,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7A87D726E20A770028D002 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				0DF5207526DF9D0C00F04C2B /* FirstTableViewCell.swift */,
+				0DF5207626DF9D0C00F04C2B /* FirstTableViewCell.xib */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		0D7A87D826E20A7E0028D002 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				0DB1DC6926DFB028004AD70E /* SecondCollectionViewCell.swift */,
+				0DB1DC6A26DFB028004AD70E /* SecondCollectionViewCell.xib */,
+				0DB1DC7826E0FE0C004AD70E /* HeaderCollectionReusableView.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		0D7A87DC26E20AB40028D002 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				0D7A87E226E20BA10028D002 /* superTableViewCell.swift */,
+				0D7A87E326E20BA10028D002 /* superTableViewCell.xib */,
+				0D7A87E926E223A50028D002 /* subCollectionViewCell.swift */,
+				0D7A87EA26E223A50028D002 /* subCollectionViewCell.xib */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
 		0DF5202226DF994F00F04C2B = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +196,7 @@
 				0DF5206B26DF9B5C00F04C2B /* FirstViewController.swift */,
 				0DF5207026DF9B7C00F04C2B /* SecondViewController.swift */,
 				0DB1DC7026DFBBE4004AD70E /* DetailViewController.swift */,
+				0D7A87DD26E20AD30028D002 /* ThirdViewController.swift */,
 			);
 			path = Viewcontroller;
 			sourceTree = "<group>";
@@ -172,11 +213,9 @@
 		0DF5206726DF9AD900F04C2B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0DF5207526DF9D0C00F04C2B /* FirstTableViewCell.swift */,
-				0DF5207626DF9D0C00F04C2B /* FirstTableViewCell.xib */,
-				0DB1DC6926DFB028004AD70E /* SecondCollectionViewCell.swift */,
-				0DB1DC6A26DFB028004AD70E /* SecondCollectionViewCell.xib */,
-				0DB1DC7826E0FE0C004AD70E /* HeaderCollectionReusableView.swift */,
+				0D7A87DC26E20AB40028D002 /* Third */,
+				0D7A87D826E20A7E0028D002 /* Second */,
+				0D7A87D726E20A770028D002 /* First */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -287,8 +326,10 @@
 				0DF5203B26DF995100F04C2B /* LaunchScreen.storyboard in Resources */,
 				0DF5203826DF995100F04C2B /* Assets.xcassets in Resources */,
 				0DF5207826DF9D0C00F04C2B /* FirstTableViewCell.xib in Resources */,
+				0D7A87E526E20BA10028D002 /* superTableViewCell.xib in Resources */,
 				0DF5203626DF994F00F04C2B /* Main.storyboard in Resources */,
 				0DB1DC6C26DFB028004AD70E /* SecondCollectionViewCell.xib in Resources */,
+				0D7A87EC26E223A50028D002 /* subCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,9 +355,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DB1DC7A26E0FE0C004AD70E /* HeaderCollectionReusableView.swift in Sources */,
+				0D7A87DE26E20AD30028D002 /* ThirdViewController.swift in Sources */,
 				0DF5207726DF9D0C00F04C2B /* FirstTableViewCell.swift in Sources */,
 				0DF5202F26DF994F00F04C2B /* AppDelegate.swift in Sources */,
+				0D7A87EB26E223A50028D002 /* subCollectionViewCell.swift in Sources */,
 				0DB1DC6B26DFB028004AD70E /* SecondCollectionViewCell.swift in Sources */,
+				0D7A87E426E20BA10028D002 /* superTableViewCell.swift in Sources */,
 				0DF5203126DF994F00F04C2B /* SceneDelegate.swift in Sources */,
 				0DF5207126DF9B7C00F04C2B /* SecondViewController.swift in Sources */,
 				0DF5206C26DF9B5C00F04C2B /* FirstViewController.swift in Sources */,
